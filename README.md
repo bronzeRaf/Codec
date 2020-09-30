@@ -19,8 +19,10 @@ Performs huffman decoding.
 
 ## encodeHuff.m
 This file contains a Huffman Encoder set of functions.
+
 ```[huffSec, huffCodebook] = encodeHuff(coeffSec, huffLUT, forcedCodebook)```
 Performs huffman coding, the codebook forcedCodebook to be used.
+
 #### Input
 - coeffSec: quantised (integer) values of a section 
 - huffLUT: the Huffman look-up tables to be loaded using loadLUT.m 
