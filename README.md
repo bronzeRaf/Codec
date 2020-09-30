@@ -5,52 +5,41 @@ It is implemented in MATLAB and the project is divided into many components of t
 ## decodeHuff.m
 This file contains a Huffman Decoder function.
 
-```decCoeffs = decodeHuff(huffSec, huffCodebook, huffLUT)```
-Performs huffman decoding.
-
-#### Input
-- huffSec: a string of '1' and '0' corresponding to the Huffman encoded stream
-- huffCodebook: the index (0 to 12) of the codebook used, as outputted by encodeHuff
-- huffLUT: the Huffman look-up tables to be loaded using loadLUT.m 
-
-#### Output
-- decCoeffs: the decoded quantised (integer) values
-
-
 ## encodeHuff.m
 This file contains a Huffman Encoder set of functions.
 
-```[huffSec, huffCodebook] = encodeHuff(coeffSec, huffLUT, forcedCodebook)```
-Performs huffman coding, the codebook forcedCodebook to be used.
+## loadLUT.m
+This file contains creates the Huffman look-up tables.
 
-#### Input
-- coeffSec: quantised (integer) values of a section 
-- huffLUT: the Huffman look-up tables to be loaded using loadLUT.m 
-- forcedCodebook: the codebook to be used
+## huffCodebookSF.mat
+This file is MATLAB workspace, used to load the Huffman codebook.
 
-#### Output
-- huffSec: string of '1' and '0' corresponding to the Huffman encoded stream
-- huffCodebook: the number of the Huffman codebook used
----
+## huffCodebook.mat
+This file is MATLAB workspace, used to load the Huffman codebook.
 
-```[huffSec,  huffCodebook]=encodeHuff1(coeffSec,huffLUT)```
-Performs huffman coding.
-#### Input
-- coeffSec: quantised (integer) values of a section 
-- huffLUT: the Huffman look-up tables to be loaded using loadLUT.m 
+## SSC.m
+This file contains function that decide the type of a sound frame.
 
-#### Output
-- huffSec: string of '1' and '0' corresponding to the Huffman encoded stream
-- huffCodebook: the number of the Huffman codebook used
----
+## filterbank.m
+This file contains a set of functions that produce the MDCT after windowing of a sound frame. The windowing could be either Kaizer windows either Sinusoid windows.
 
-```[huffSec]=huffLUTCode1(huffLUT, coeffSec)```
-Performs the actual Huffman coding. It is not called by the user.
+## ifilterbank.m
+This file contains a set of functions that produce the sound frame of a window. It contains the inverse proceses of the filterbank.m.
 
-```[huffSec]=huffLUTCode0()```
-Returns a blank sequence. It is not called by the user.
+## TNS.m
+This file contains a set of functions that filters a frame to apply temporal noise shaping. It transforms a MDCT to a new group of coeffs without periodicity.
 
-```[huffSec]=huffLUTCodeESC(huffLUT, coeffSec)```
-Performs the actual Huffman coding with the escape sequence. It is not called by the user.
+## iTNS.m
+This file contains a set of functions that transforms a temporal noise shaping set of coeffs to a MDCT frame. It contains the inverse proceses of the TNS.m.
 
+## AACquantizer.m
+This file contains a function that quantizes a MDCT frame.
 
+## iAACquantizer.m
+This file contains a function that dequantizes a frame to restore the normal MDCT frame. It contains the inverse proceses of the AACquantizer.m.
+
+## AACoder3.m
+This file contains a set of functions that encodes a WAV file to AAC.
+
+## iAACoder3.m
+This file contains a set of functions that decodes an AAC file to a WAV file. It contains the inverse proceses of the AACoder3.m.
