@@ -4,7 +4,7 @@ It is implemented in MATLAB and the project is divided into many components of t
 
 ## decodeHuff.m
 This file contains a Huffman Decoder function 
-  decCoeffs = decodeHuff(huffSec, huffCodebook, huffLUT)
+    decCoeffs = decodeHuff(huffSec, huffCodebook, huffLUT)
 
 ## encodeHuff.m
     [huffSec, huffCodebook] = encodeHuff(coeffSec, huffLUT, forcedCodebook)
