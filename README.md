@@ -6,11 +6,12 @@ It is implemented in MATLAB and the project is divided into many components of t
 This file contains a Huffman Decoder function.
 
     ```decCoeffs = decodeHuff(huffSec, huffCodebook, huffLUT)```
-### Input
+#### Input
 - huffSec: a string of '1' and '0' corresponding to the Huffman encoded stream
 - huffCodebook: the index (0 to 12) of the codebook used, as outputted by encodeHuff
 - huffLUT: the Huffman look-up tables to be loaded using loadLUT.m 
-### Output
+
+#### Output
 - decCoeffs:the decoded quantised (integer) values
 
 
