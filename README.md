@@ -7,17 +7,17 @@ This file contains a Huffman Decoder function
   decCoeffs = decodeHuff(huffSec, huffCodebook, huffLUT)
 
 ## encodeHuff.m
-  [huffSec, huffCodebook] = encodeHuff(coeffSec, huffLUT, forcedCodebook)
+    [huffSec, huffCodebook] = encodeHuff(coeffSec, huffLUT, forcedCodebook)
 bbl;ibn
 
-  [huffSec,  huffCodebook]=encodeHuff1(coeffSec,huffLUT)
+    [huffSec,  huffCodebook]=encodeHuff1(coeffSec,huffLUT)
 vuyvuykl
 
-  [huffSec]=huffLUTCode1(huffLUT, coeffSec)
+    [huffSec]=huffLUTCode1(huffLUT, coeffSec)
 ytfcy
 
-  [huffSec]=huffLUTCode0()
+    [huffSec]=huffLUTCode0()
 bhuilbi
 
-  [huffSec]=huffLUTCodeESC(huffLUT, coeffSec)
+    [huffSec]=huffLUTCodeESC(huffLUT, coeffSec)
 ikjno
